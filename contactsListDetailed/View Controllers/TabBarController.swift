@@ -1,8 +1,6 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
-    
     
     @IBOutlet var addContactButton: UIBarButtonItem!
     
@@ -22,8 +20,6 @@ class TabBarController: UITabBarController {
         infoListVC.contactsList = contactsList
     }
     
-    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {}
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "addNewContact" else { return }
         
@@ -41,7 +37,9 @@ extension TabBarController: ContactViewControllerDelegate {
         
         contactsList.append(contact)
         setupViewControllers(for: contactsList)
-        contactsListVC.mainTableView.reloadData()
+        contactsListVC.mainTableView.beginUpdates()
+        contactsListVC.mainTableView.insertRows(at: [IndexPath(row: contactsList.count - 1 , section: 0)], with: .automatic)
+        contactsListVC.mainTableView.endUpdates()
         if infoListVC.isViewLoaded {
             infoListVC.mainTableView.reloadData()
         }
