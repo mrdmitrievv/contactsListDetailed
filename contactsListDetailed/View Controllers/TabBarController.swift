@@ -25,7 +25,6 @@ class TabBarController: UITabBarController {
         
         let newContactVC = segue.destination as! NewContactViewController
         newContactVC.delegate = self
- 
     }
     
 }

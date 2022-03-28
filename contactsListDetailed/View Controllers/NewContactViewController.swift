@@ -28,8 +28,8 @@ class NewContactViewController: UIViewController {
               newContact.surname != "",
               newContact.telephoneNumber != "",
               newContact.mail != ""
-              else {
-            return
+        else {
+            return showAlert(title: "Wrong format", message: "Check that all fields are filled correctly")
         }
         delegate?.saveContact(newContact)
         self.dismiss(animated: true, completion: nil)
@@ -89,11 +89,25 @@ extension NewContactViewController: UITextFieldDelegate {
             case 0: newContact.name = text
             case 1: newContact.surname = text
             case 2:
-                if let currentValue = Float(text) {
+                if let currentValue = Int(text) {
                     newContact.telephoneNumber = String(currentValue)
+                } else {
+                    showAlert(title: "Wrong format!", message: "Only numbers should be used")
+                    textField.text = ""
                 }
             case 3: newContact.mail = text
             default: break
             }        
+    }
+}
+
+extension NewContactViewController {
+    func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in textField?.text = nil }
+        alert.addAction(okAction)
+        
+        textField?.text = nil
+        present(alert, animated: true)
     }
 }

@@ -9,8 +9,6 @@ class ContactsListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Persons List"
-        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

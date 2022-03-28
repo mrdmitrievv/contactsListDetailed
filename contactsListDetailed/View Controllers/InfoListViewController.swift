@@ -8,14 +8,11 @@ class InfoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return contactsList.count
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionTitle = contactsList[section].fullName
