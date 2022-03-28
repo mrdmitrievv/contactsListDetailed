@@ -2,6 +2,8 @@ import UIKit
 
 class ContactsListViewController: UITableViewController {
     
+    @IBOutlet var mainTableView: UITableView!
+    
     var contactsList: [Person] = []
         
     override func viewDidLoad() {
@@ -12,14 +14,15 @@ class ContactsListViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showDetails" else { return }
         let contactDetailsVC = segue.destination as! ContactDetailsViewController
         guard let indexPath = tableView.indexPathForSelectedRow
         else { return }
 
-        contactDetailsVC.contact = contactsList[indexPath.row]
-    }
+        contactDetailsVC.contact = contactsList[indexPath.row]        
+        
+    }        
     
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contactsList.count
     }
@@ -38,4 +41,5 @@ class ContactsListViewController: UITableViewController {
     }
     
 }
+
 

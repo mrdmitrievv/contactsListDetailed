@@ -2,6 +2,8 @@ import UIKit
 
 class InfoListViewController: UITableViewController {
     
+    @IBOutlet var mainTableView: UITableView!
+    
     var contactsList: [Person] = []
     
     override func viewDidLoad() {

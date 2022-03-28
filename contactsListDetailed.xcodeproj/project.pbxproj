@@ -18,6 +18,7 @@
 		ABA4FFC527EA612500045C4C /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4FFC427EA612500045C4C /* ContactDetailsViewController.swift */; };
 		ABA4FFC727EB267C00045C4C /* InfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4FFC627EB267B00045C4C /* InfoListViewController.swift */; };
 		ABA4FFC927EB773C00045C4C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4FFC827EB773C00045C4C /* TabBarController.swift */; };
+		ABA4FFF327EF507700045C4C /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4FFF227EF507700045C4C /* NewContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		ABA4FFC427EA612500045C4C /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		ABA4FFC627EB267B00045C4C /* InfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListViewController.swift; sourceTree = "<group>"; };
 		ABA4FFC827EB773C00045C4C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		ABA4FFF227EF507700045C4C /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				ABA4FFC427EA612500045C4C /* ContactDetailsViewController.swift */,
 				ABA4FFC627EB267B00045C4C /* InfoListViewController.swift */,
 				ABA4FFC827EB773C00045C4C /* TabBarController.swift */,
+				ABA4FFF227EF507700045C4C /* NewContactViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				ABA4FFC127EA160500045C4C /* Person.swift in Sources */,
 				ABA4FFBF27EA152400045C4C /* ContactsListViewController.swift in Sources */,
 				ABA4FFC727EB267C00045C4C /* InfoListViewController.swift in Sources */,
+				ABA4FFF327EF507700045C4C /* NewContactViewController.swift in Sources */,
 				ABA4FFAD27EA14BB00045C4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
