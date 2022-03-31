@@ -11,7 +11,7 @@ class ContactDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         // Add some comments
-        
+        // some comments for test branch
         if let contact = contact {
             navigationItem.title = contact.fullName
             labelForPhone.text = "Phone: " + contact.telephoneNumber
