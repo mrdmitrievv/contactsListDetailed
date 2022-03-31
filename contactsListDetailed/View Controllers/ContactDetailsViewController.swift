@@ -10,6 +10,8 @@ class ContactDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add some comments
+        
         if let contact = contact {
             navigationItem.title = contact.fullName
             labelForPhone.text = "Phone: " + contact.telephoneNumber
